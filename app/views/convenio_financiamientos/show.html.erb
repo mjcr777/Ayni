@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @convenio_financiamiento.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @convenio_financiamiento.descripcion %>
+</p>
+
+<p>
+  <b>Fecha inicio:</b>
+  <%= @convenio_financiamiento.fecha_inicio %>
+</p>
+
+<p>
+  <b>Fecha fin:</b>
+  <%= @convenio_financiamiento.fecha_fin %>
+</p>
+
+<p>
+  <b>Monto:</b>
+  <%= @convenio_financiamiento.monto %>
+</p>
+
+<p>
+  <b>Moneda:</b>
+  <%= @convenio_financiamiento.moneda %>
+</p>
+
+
+<%= link_to 'Edit', edit_convenio_financiamiento_path(@convenio_financiamiento) %> |
+<%= link_to 'Back', convenio_financiamientos_path %>

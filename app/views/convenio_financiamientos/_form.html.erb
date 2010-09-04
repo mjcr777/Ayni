@@ -1,0 +1,26 @@
+<%= simple_form_for(@convenio_financiamiento) do |f| %>
+  <% if @convenio_financiamiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@convenio_financiamiento.errors.count, "error") %> prohibited this convenio_financiamiento from being saved:</h2>
+
+      <ul>
+      <% @convenio_financiamiento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="inputs">
+    <%= f.input :nombre %>
+    <%= f.input :descripcion, :as => :text %>
+    <%= f.input :fecha_inicio %>
+    <%= f.input :fecha_fin %>
+    <%= f.input :monto %>
+    <%= f.input :moneda, :collection => ConvenioFinanciamiento::MONEDAS %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
